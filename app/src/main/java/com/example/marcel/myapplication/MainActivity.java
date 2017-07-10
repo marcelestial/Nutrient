@@ -8,31 +8,50 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean locked;
+    double calg, sodg, potg, prog, fibg;
+    EditText calBox, sodBox, potBox, proBox, fibBox, gramBox;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        locked = false;
+
+        calBox = (EditText) findViewById(R.id.cal);
+        sodBox = (EditText) findViewById(R.id.sod);
+        potBox = (EditText) findViewById(R.id.pot);
+        proBox = (EditText) findViewById(R.id.pro);
+        fibBox = (EditText) findViewById(R.id.fib);
+        gramBox = (EditText) findViewById(R.id.grams);
+
     }
 
     public void calculate(View v){
-        EditText cal = (EditText) findViewById(R.id.cal);
-        EditText sod = (EditText) findViewById(R.id.sod);
-        EditText pot = (EditText) findViewById(R.id.pot);
-        EditText pro = (EditText) findViewById(R.id.pro);
-        EditText fib = (EditText) findViewById(R.id.fib);
-        EditText gram = (EditText) findViewById(R.id.grams);
+        locked = true;
 
-        double calories = Double.parseDouble(cal.getText().toString());
-        double sodium = Double.parseDouble(sod.getText().toString());
-        double potassium = Double.parseDouble(pot.getText().toString());
-        double protein = Double.parseDouble(pro.getText().toString());
-        double fiber = Double.parseDouble(fib.getText().toString());
+        //snarf values from edittexts
+        double calories = Double.parseDouble(calBox.getText().toString());
+        double sodium = Double.parseDouble(sodBox.getText().toString());
+        double potassium = Double.parseDouble(potBox.getText().toString());
+        double protein = Double.parseDouble(proBox.getText().toString());
+        double fiber = Double.parseDouble(fibBox.getText().toString());
 
-        double grams = Double.parseDouble(gram.getText().toString());
+        double grams = Double.parseDouble(gramBox.getText().toString());
+
+        //determine values per gram
+        calg = calories / grams;
+        sodg = sodium / grams;
+        potg = potassium / grams;
+        prog = protein / grams;
+        fibg = fiber / grams;
     }
 
     public void update(View v){
         //when amount is changed, multiply values
+        if(locked){
+            double newGrams = Double.parseDouble(gramBox.getText().toString());
 
+        }
     }
 }
