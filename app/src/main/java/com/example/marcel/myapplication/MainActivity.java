@@ -7,7 +7,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    //a change
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

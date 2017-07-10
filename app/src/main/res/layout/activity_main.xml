@@ -11,7 +11,11 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
+        <EditText
+            android:id="@+id/grams"
+            android:hint="grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     <EditText
             android:id="@+id/cal"
             android:hint="calories"
@@ -38,18 +42,13 @@
             android:hint="fiber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/grams"
-        android:hint="grams"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
     </LinearLayout>
     
     <Button
         android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="lock"
         android:onClick="calculate"/>
 
 </LinearLayout>
