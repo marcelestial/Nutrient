@@ -25,7 +25,8 @@
             <EditText
                 android:id="@+id/grams"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
         </LinearLayout>
 
         <LinearLayout
@@ -42,7 +43,7 @@
                 android:id="@+id/cal"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -58,7 +59,8 @@
             <EditText
                 android:id="@+id/sod"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,7 +76,8 @@
             <EditText
                 android:id="@+id/pot"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
         </LinearLayout>
 
         <LinearLayout
@@ -90,7 +93,8 @@
             <EditText
                 android:id="@+id/pro"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
         </LinearLayout>
 
         <LinearLayout
@@ -106,7 +110,8 @@
             <EditText
                 android:id="@+id/fib"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
         </LinearLayout>
     </LinearLayout>
 
