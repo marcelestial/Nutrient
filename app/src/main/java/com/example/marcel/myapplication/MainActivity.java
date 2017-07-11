@@ -1,5 +1,6 @@
 package com.example.marcel.myapplication;
 
+import android.icu.text.DecimalFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -93,6 +94,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
+    private double round (double value, int precision) {
+        int scale = (int) Math.pow(10, precision);
+        return (double) Math.round(value * scale) / scale;
+    }
+
     public void update(){
         //when amount is changed, multiply values
         double newGrams = 0;
@@ -104,11 +110,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         }
 
-        calBox.setText("" + (calg * newGrams));
-        sodBox.setText("" + (sodg * newGrams));
-        potBox.setText("" + (potg * newGrams));
-        proBox.setText("" + (prog * newGrams));
-        fibBox.setText("" + (fibg * newGrams));
+
+        calBox.setText("" + round((calg * newGrams), 1));
+        sodBox.setText("" + round((sodg * newGrams), 1));
+        potBox.setText("" + round((potg * newGrams), 1));
+        proBox.setText("" + round((prog * newGrams), 1));
+        fibBox.setText("" + round((fibg * newGrams), 1));
     }
 
     @Override
