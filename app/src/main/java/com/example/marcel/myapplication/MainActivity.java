@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    final double OZTOG = 28.3495;
+    final double GPEROZ = 28;
     boolean saved;
     //boolean units determines which units of measurement for amount (true=oz, false=g)
     boolean units;
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(!amountBox.getText().toString().equals("")) {
             newGrams = Double.parseDouble(amountBox.getText().toString());
             if(units){
-                newGrams /= OZTOG;
+                newGrams /= GPEROZ;
             }
         }
 
@@ -117,12 +117,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(pos == 0){
             units = false;
             double oz = Double.parseDouble(amountBox.getText().toString());
-            amountBox.setText("" + (oz / OZTOG));
+            amountBox.setText("" + (oz * GPEROZ));
         }
         else{
             units = true;
             double g = Double.parseDouble(amountBox.getText().toString());
-            amountBox.setText("" + (g * OZTOG));
+            amountBox.setText("" + (g / GPEROZ));
         }
     }
 
