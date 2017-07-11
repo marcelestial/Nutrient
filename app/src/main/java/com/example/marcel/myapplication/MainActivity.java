@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(!amountBox.getText().toString().equals("")) {
             newGrams = Double.parseDouble(amountBox.getText().toString());
             if(units){
-                newGrams /= GPEROZ;
+                newGrams *= GPEROZ;
             }
         }
 
