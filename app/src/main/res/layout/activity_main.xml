@@ -17,16 +17,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <Spinner
+                android:id="@+id/unit_spinner"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="grams" />
+                android:layout_height="wrap_content">
+            </Spinner>
 
             <EditText
                 android:id="@+id/grams"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="numberDecimal"/>
         </LinearLayout>
 
         <LinearLayout
@@ -43,7 +44,7 @@
                 android:id="@+id/cal"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:inputType="number" />
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <LinearLayout
@@ -60,7 +61,7 @@
                 android:id="@+id/sod"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:inputType="number" />
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <LinearLayout
@@ -77,7 +78,7 @@
                 android:id="@+id/pot"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="numberDecimal"/>
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +95,7 @@
                 android:id="@+id/pro"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="numberDecimal"/>
         </LinearLayout>
 
         <LinearLayout
@@ -111,7 +112,7 @@
                 android:id="@+id/fib"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="numberDecimal"/>
         </LinearLayout>
     </LinearLayout>
 

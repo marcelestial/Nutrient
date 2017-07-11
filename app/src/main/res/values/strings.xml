@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyApplication</string>
+
+    <string-array name="units">
+        <item>grams</item>
+        <item>oz</item>
+    </string-array>
 </resources>
