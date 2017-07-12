@@ -124,12 +124,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(pos == 0){
             units = false;
             double oz = Double.parseDouble(amountBox.getText().toString());
-            amountBox.setText("" + (oz * GPEROZ));
+            amountBox.setText("" + round((oz * GPEROZ), 3));
         }
         else{
             units = true;
             double g = Double.parseDouble(amountBox.getText().toString());
-            amountBox.setText("" + (g / GPEROZ));
+            amountBox.setText("" + round((g / GPEROZ), 3));
         }
     }
 
